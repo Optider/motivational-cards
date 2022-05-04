@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  position: relative;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+
+  height: 400px;
+  width: 400px;
+  background-color: #c7d6e1;
+
+  padding: 1rem;
+  filter: drop-shadow(2px 10px 5px rgba(0, 0, 0, 0.15));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 240px;
+  height: 150px;
+
+  background-color: #fff;
+  padding: 1rem;
+  overflow: hidden;
+
+  opacity: 0;
+}
+
+.card--thought_heading {
+  color: #616e7d;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card--thought p {
+  color: #8391a1;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.1rem;
+}
+
+.card--number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  background: #8391a1;
+  color: #fff;
+  transform: rotate(45deg) translate(8px, -34px);
+}
+
+.card--action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.card--action .btn {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  background-color: #3ca7fb;
+  border: 1px solid #3ca7fb;
+
+  color: #fff;
+}
+
+.card.active {
+  visibility: visible;
+  animation: fadeIn 0.5s ease-in-out normal forwards;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
